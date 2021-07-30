@@ -13,7 +13,7 @@ def ProductSelection(productName):
             im_resized = cv2.resize(im, TARGET_SIZE)
             im_flipped = cv2.flip(im_resized, 1)
 
-            mask = cv2.inRange(im_flipped,(0,0,80),(50,50,255))
+            mask = cv2.inRange(im_flipped,(0,0,80),(50,50,255)) ## (B, G, R) ## cv2.inRange(im_flipped,(ขอบเขตเริ่มต้น น้อยสุด 0 ),(ขอบเขตมากสุด มากสุด 255)) ปรับสี เเดงตรงนี้นะ 
             cv2.imshow('mask', mask)
 
             #############################################
@@ -36,7 +36,7 @@ def ProductSelection(productName):
 
             if(np.sum(mask/255) > 0.01*h*w):
                 # print(np.sum(mask/255), 0.01*h*w)
-                cv2.putText(im_flipped,'Coke',(50,100),cv2.FONT_HERSHEY_PLAIN,10,(155,155,155))
+                cv2.putText(im_flipped,'Coke',(50,100),cv2.FONT_HERSHEY_PLAIN,10,(155,155,155)) 
 
             cv2.imshow('camera', im_flipped)
 
@@ -56,7 +56,7 @@ def ProductSelection(productName):
             im_resized = cv2.resize(im, TARGET_SIZE)
             im_flipped = cv2.flip(im_resized, 1)
 
-            mask = cv2.inRange(im_flipped,(60,0,0),(255,50,50))
+            mask = cv2.inRange(im_flipped,(60,0,0),(255,50,50)) ## (B, G, R) ## cv2.inRange(im_flipped,(ขอบเขตเริ่มต้น น้อยสุด 0 ),(ขอบเขตมากสุด มากสุด 255)) ปรับสี น้ำเงินตรงนี้นะ 
             cv2.imshow('mask', mask)
 
             #############################################
@@ -99,7 +99,7 @@ def ProductSelection(productName):
             im_resized = cv2.resize(im, TARGET_SIZE)
             im_flipped = cv2.flip(im_resized, 1)
 
-            mask = cv2.inRange(im_flipped,(0,40,0),(50,255,50))
+            mask = cv2.inRange(im_flipped,(0,40,0),(50,255,50)) ## (B, G, R) ## cv2.inRange(im_flipped,(ขอบเขตเริ่มต้น น้อยสุด 0 ),(ขอบเขตมากสุด มากสุด 255)) ปรับสี เขียวตรงนี้นะ 
             cv2.imshow('mask', mask)
 
             #############################################
