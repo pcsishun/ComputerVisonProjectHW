@@ -34,7 +34,7 @@ while(True):
     cv2.putText(im_flipped, str(r), (160, 30),cv2.FONT_HERSHEY_PLAIN, 2, (0, 0, 255))
             #############################################
     
-    print(thesR_B, thesG_B, thesB_B)
+    print("thesR",thesR_B, "thesG",thesG_B,"thesB", thesB_B)
 
     if r >= 100 and b < 80 and g < 80:
         thesR_B = 100
@@ -73,7 +73,7 @@ while(True):
         thesB_L = 50
 
         if(np.sum(mask/255) > 0.01*h*w):
-            print('7Up', b)
+            print('7Up', g)
             cv2.putText(im_flipped,'7Up',(50,100),cv2.FONT_HERSHEY_PLAIN,8,(155,155,155)) 
     
     cv2.imshow('mask', mask)
